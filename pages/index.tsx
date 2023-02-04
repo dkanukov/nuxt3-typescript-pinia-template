@@ -1,13 +1,10 @@
+import {defineProps} from '@vue/runtime-core';
 export default defineComponent({
-    async setup() {
-        const { data } = await useFetch('/api/fetchTableData')
-        console.log(data)
-    },
-    render() {
-        return (
+    setup() {
+        return () => (
             <div>
-                The rest of the page
+                Page text
             </div>
         )
-    }
+    },
 })

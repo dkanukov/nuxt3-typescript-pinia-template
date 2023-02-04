@@ -1,11 +1,12 @@
 import {defineComponent} from '#imports';
-import {NuxtPage} from '#components';
+import {LayoutHeader, NuxtPage} from '#components';
 
 export default defineComponent({
     render () {
         return (
             <div>
-                <h1>Default layout</h1>
+                <LayoutHeader/>
+                <h2>Default layout</h2>
                 <NuxtPage/>
             </div>
         )
