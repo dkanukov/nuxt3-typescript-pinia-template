@@ -1,14 +1,23 @@
-import {defineProps} from '@vue/runtime-core';
+import {PropType} from '@vue/runtime-core';
 import styles from './styles.module.css'
 
-interface Props {
-    headerMsg: string
-}
 export default defineComponent({
-    setup() {
-        const props = defineProps<Props>()
+    props: {
+        headerMsg: {
+            type: String as PropType<string>,
+            required: true
+        },
+        randomArray: {
+            type: Array as PropType<number[]>,
+        }
+    },
+    setup(props) {
         return () => (
-            <h1 class={styles.headerColor}>{{props}} 123</h1>
+            <div>
+                <h1 class={styles.headerColor}>{props.headerMsg}</h1>
+                <span>{props.randomArray}</span>
+            </div>
         )
     }
+
 })
