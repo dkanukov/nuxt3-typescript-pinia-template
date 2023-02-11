@@ -22,4 +22,5 @@ export default defineNuxtConfig({
             pathPrefix: false,
         }
     ],
+    ssr: false,
 })
